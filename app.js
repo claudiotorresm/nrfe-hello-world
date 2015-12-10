@@ -21,11 +21,9 @@ requirejs.config(
 requirejs(['nrfe','jquery/dist/jquery','mustache','json!../flows.json', 'json!nrfe-widgets/widgetlist.json'],
 	function(nrfe, $, mustache, definition, widgetlist)
 	{
-		var generator = new nrfe(widgetlist, document.getElementById("content"), function()
+		var generator = new nrfe(widgetlist, function()
 		{
-			console.log('nrfe loaded');
-			console.log(definition);
-			generator.render(definition);
+			generator.render(definition, document.getElementById("content"));
 		});
 
 
