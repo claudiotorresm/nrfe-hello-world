@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,
+		shrink-to-fit=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+
+	<title>Hello Node-Red World</title>
+
+	<style>
+		@import 'ui/mdl/material.min.css';
+		html, body, #content
+		{
+			height: 100%;
+		}
+	</style>
+
+	<script>
+	// Redirect console.log to Evothings Workbench.
+	if (window.hyper && window.hyper.log) { console.log = hyper.log }
+	</script>
+
+	<script src="ui/mdl/material.min.js"></script>
+	<script data-main="app.js" src="bower_components/requirejs/require.js"></script>
+
+
+</head>
+
+<body ontouchstart=""><!-- ontouchstart="" enables low-delay CSS transitions. -->
+
+	<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+		<header class="mdl-layout__header mdl-layout__header--transparent">
+
+			<img class="logotype" src="ui/images/logo.svg" alt="Evothings" />
+
+			<!--<button class="menu" onclick=""><img src="ui/images/menu.svg" /></button>-->
+		</header>
+
+		<div id="content"></div>
+
+		<script src="cordova.js"></script>
+		<script src="libs/evothings/evothings.js"></script>
+
+
+	</div>
+
+</body>
+
+</html>
